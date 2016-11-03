@@ -1,9 +1,12 @@
-Jim's Joint
-2016.10.31
+Doesn't Matter Dinner
+November 1st, 2016
 
 Your order:
-- 1 Big Burger
-- 2 Coffee
-- 1 Cheese
+- 1 Spooky Burger
+- 1 Fries of the Witches
+- 2 Trumpets
+- 1 Skeleton Milk (because calcium is good for the bones)
 
-Total: $18.84
+---- Fill out our survey at "awebsite.com" to receive... nothing. ----
+
+Total: $4.12
