@@ -8,15 +8,13 @@
         {caboose_styles}
      </head>
     <body>
-		<div class="container">
-			{navbar}
-			<div class="jumbotron">
-				<h1>{message}</h1>
-                                <p>{bodymessage}</p>
-			</div>
-            
-            <p class="footer">Page rendered in <strong>0.0155</strong> seconds. 
-                {ci_version}</p>
+        <div class="container">
+            {navbar}
+            <div class="jumbotron">
+                <h3>{message}</h3>
+                <p>{bodymessage}</p>
+                {content}
+            </div>
         </div>
         {caboose_scripts}
         {caboose_trailings}
