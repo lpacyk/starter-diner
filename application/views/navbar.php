@@ -10,12 +10,17 @@
 			</button>
 			<a class="navbar-brand" href="#">{pagetitle}</a>
 		</div>
-
+                
+                <p class="navbar-text navbar-right">Role: {userrole}</p>
+		</div><!-- /.navbar-collapse -->
+                
 		<div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
 				<li><a href="/">Home</a></li>
 				<li><a href="/hiring">Hiring</a></li>
 				<li><a href="/shopping">Shopping</a></li>
+                                <li><a href="/toggle">Toggle Role</a></li>
+                                <li><a href="/crud">CRUD</a></li>
             </ul>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
