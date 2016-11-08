@@ -17,6 +17,7 @@
 				<li><a href="/hiring">Hiring</a></li>
 				<li><a href="/shopping">Shopping</a></li>
                                 <li><a href="/toggle">Toggle Role</a></li>
+                                <li><a href="/admin">Admin</a></li>
             </ul>
             <p class="navbar-text navbar-right">Role: {userrole}</p>
 		</div><!-- /.navbar-collapse -->
