@@ -23,6 +23,10 @@ class Application extends CI_Controller {
 		$this->data = array();
 		$this->data['pagetitle'] = "Jim's Joint";
 		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '';
+                
+                // get the user role
+		$this->data['userrole'] = $this->session->userdata('userrole');
+		if ($this->data['userrole'] == NULL) $this->data['userrole'] = '?';
 	}
 
 	/**
