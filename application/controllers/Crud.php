@@ -49,9 +49,13 @@ class Crud extends Application {
         $this->data['fprice'] = makeTextField('Price, each', 'price', $record->price);
         $this->data['fpicture'] = makeTextField('Item image', 'picture', $record->picture);
         
-        $this->categories->all(); // get an array of category objects
-        foreach($cats as $code => $category) // make it into an associative array
-            $codes[$code] = $category->name;        
+        $cats = $this->categories->all(); // get an array of category objects
+        
+        foreach($cats as $code => $category)
+        {
+            // make it into an associative array
+            $codes[$code] = $category->name;    
+        }
         $this->data['fcategory'] = makeCombobox('Category', 'category', $record->category, $codes);
         
         $this->data['zsubmit'] = makeSubmitButton('Save', 'Submit changes');
