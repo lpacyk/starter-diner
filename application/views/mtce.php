@@ -6,7 +6,7 @@
         </tr>
         {items}
         <tr>
-                <td>{id}</td>
+                <td><a class="btn btn-default" role="button" href="/crud/edit/{id}">{id}</a></td>
                 <td>{name}</td>
                 <td>{description}</td>
         </tr>
