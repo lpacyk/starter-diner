@@ -15,3 +15,4 @@ November 10th, 2016:
     - Added 'edit' function to Crud controller.
     - Added 'mtce-edit' view.
     - Made it look nicer
+    - Fixed a small error in the Crud Controller
