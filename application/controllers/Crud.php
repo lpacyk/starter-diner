@@ -51,10 +51,9 @@ class Crud extends Application {
         
         $cats = $this->categories->all(); // get an array of category objects
         
-        foreach($cats as $code => $category)
+        foreach ($cats as $code => $category) 
         {
-            // make it into an associative array
-            $codes[$code] = $category->name;    
+            $codes[$category->id] = $category->name;// make it into an associative array
         }
         $this->data['fcategory'] = makeCombobox('Category', 'category', $record->category, $codes);
         
