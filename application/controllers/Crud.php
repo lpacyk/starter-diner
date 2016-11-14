@@ -40,17 +40,14 @@ class Crud extends Application {
     }
 
     public function edit($id = null) {
-        //  $this->session->unset_userdata('key');
-        //   $this->session->unset_userdata('record');
         //Debugging Note
-//As you work through the tutorial, a common problem is the retention of a previous data transfer object in the session. The symptom: when you click on X in the menu item list, you get the edit page for the previously selected menu item.
-//To fix this, click "Cancel" on the edit page. That will clear the DTO stored in the session, and the "correct" menu item should then show up on the edit page when selected from the list.
+        //As you work through the tutorial, a common problem is the retention of a previous data transfer object in the session. The symptom: when you click on X in the menu item list, you get the edit page for the previously selected menu item.
+        //To fix this, click "Cancel" on the edit page. That will clear the DTO stored in the session, and the "correct" menu item should then show up on the edit page when selected from the list.
         // try the session first
         $key = $this->session->userdata('key');
         $record = $this->session->userdata('record');
-
         // if not there, get them from the database
-        if (empty($key)) {
+        if (empty($record)) {
             $record = $this->menu->get($id);
             $key = $id;
             $this->session->set_userdata('key', $id);
@@ -58,21 +55,24 @@ class Crud extends Application {
         }
         
         $this->data['action'] = (empty($key)) ? 'Adding' : 'Editing';
-
+        
         // build the form fields
         $this->data['fid'] = makeTextField('Menu code', 'id', $record->id);
         $this->data['fname'] = makeTextField('Item name', 'name', $record->name);
         $this->data['fdescription'] = makeTextArea('Description', 'description', $record->description);
         $this->data['fprice'] = makeTextField('Price, each', 'price', $record->price);
         $this->data['fpicture'] = makeTextField('Item image', 'picture', $record->picture);
-
+        
         $cats = $this->categories->all(); // get an array of category objects
-        foreach ($cats as $code => $category) // make it into an associative array
+        
+        foreach ($cats as $code => $category)
+        {// make it into an associative array
             $codes[$category->id] = $category->name;
+        }
+        
         $this->data['fcategory'] = makeCombobox('Category', 'category', $record->category, $codes);
-
         $this->data['zsubmit'] = makeSubmitButton('Save', 'Submit changes');
-
+        
         // show the editing form
         $this->data['pagebody'] = "mtce-edit";
         $this->show_any_errors();
@@ -178,7 +178,7 @@ class Crud extends Application {
         $record = $this->menu->create();
 
         $this->session->set_userdata('key', $key);
-        $this->session->set_userdata('record', $record);
+        $this->session->set_userdata('record', $record);    
         $this->edit();
     }
 
