@@ -10,3 +10,13 @@ November 3rd, 2016:
 
 November 3rd, 2016:
     - Fixed problem displaying the template-maintenece page
+
+November 10th, 2016:
+    - Added 'edit' function to Crud controller.
+    - Added 'mtce-edit' view.
+    - Made it look nicer
+    - Fixed a small error in the Crud Controller
+
+November 13th, 2016:
+    - Added Editing menu items, and adding new items.
+    - Fixed display error with adding items.
