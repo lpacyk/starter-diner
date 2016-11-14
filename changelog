@@ -16,3 +16,7 @@ November 10th, 2016:
     - Added 'mtce-edit' view.
     - Made it look nicer
     - Fixed a small error in the Crud Controller
+
+November 13th, 2016:
+    - Added Editing menu items, and adding new items.
+    - Fixed display error with adding items.
