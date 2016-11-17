@@ -20,3 +20,9 @@ November 10th, 2016:
 November 13th, 2016:
     - Added Editing menu items, and adding new items.
     - Fixed display error with adding items.
+
+November 17th, 2016:
+    - Added Shopping controller with some functions
+    - Added Order model, gets autoloaded
+    - Added summary page
+    - Added cancel button to template-shopping

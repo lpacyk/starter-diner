@@ -9,7 +9,38 @@ class Shopping extends Application
 		parent::__construct();
 	}
 	
-	public function index()
+        public function index() {
+            // What is the user up to?
+            if ($this->session->has_userdata('order'))
+                $this->keep_shopping();
+            else $this->summarize();
+        }
+
+        public function summarize() {
+            $this->data['pagebody'] = 'summary';
+            $this->render('template');  // use the default template
+        }
+        
+        public function cancel() {
+            // Drop any order in progress
+            if ($this->session->has_userdata('order')) {
+                $this->session->unset_userdata('order');
+            }
+
+            $this->index();
+        }
+
+        public function neworder() {
+            // create a new order if needed
+            if (! $this->session->has_userdata('order')) {
+                $order = new Order();
+                $this->session->set_userdata('order',$order);
+            }
+
+            $this->keep_shopping();
+        }
+
+	public function keep_shopping()
 	{
         $stuff = file_get_contents('../data/receipt.md');
         $this->data['receipt'] = $this->parsedown->parse($stuff);
