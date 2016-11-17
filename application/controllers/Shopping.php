@@ -45,8 +45,8 @@ class Shopping extends Application {
         $stuff = $order->receipt();
         $this->data['receipt'] = $this->parsedown->parse($stuff);
 
-        $stuff = file_get_contents('../data/receipt.md');
-        $this->data['receipt'] = $this->parsedown->parse($stuff);
+       //  $stuff = file_get_contents('../data/receipt.md');
+       //  $this->data['receipt'] = $this->parsedown->parse($stuff);
         $this->data['content'] = '';
 
         // pictorial menu
