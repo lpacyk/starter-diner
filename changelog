@@ -28,3 +28,7 @@ November 17th, 2016:
     - Added cancel button to template-shopping
     - Handle Order Checkout and Show Order Receipt
     - Tested and rough formatting
+
+November 20th, 2016:
+    - Displays all receipts, and can examine the receipt.
+    - Updated .XML receipt structure to show the Order #.
